@@ -43,7 +43,16 @@ const App = () => {
             setNotificationMessage(null)
           }, 5000)
         })
-        .catch(err => console.log(err))
+        .catch(err => {
+          setIsError(true)
+          setNotificationMessage(
+            `${err.response.data.error}`
+          )
+          setTimeout(() => {
+            setNotificationMessage(null)
+            setIsError(false)
+          }, 5000)
+        })
     } else {
       if(window.confirm(`${personObject.name} is already added to phonebook , replace the old number with the new one?`)) {
         updatePerson(personObject)
