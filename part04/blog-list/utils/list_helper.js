@@ -9,7 +9,16 @@ const getTotalLikes = (blogs) => {
   return totalLikes
 }
 
+const findBlogWithMostLikes = (blogs) => {
+  const mostLikedPost = blogs.reduce((mostLiked, blog) => {
+    if(blog.likes > mostLiked.likes) return mostLiked = blog
+    else return mostLiked
+  }, blogs[0])
+  return mostLikedPost
+}
+
 module.exports = {
   dummy,
-  getTotalLikes
+  getTotalLikes,
+  findBlogWithMostLikes
 }
