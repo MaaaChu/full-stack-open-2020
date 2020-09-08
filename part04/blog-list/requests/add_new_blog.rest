@@ -2,8 +2,8 @@ POST http://localhost:3001/api/blogs
 Content-Type: application/json
 
 {
-    "title": "Bye",
-    "author": "Scrub W",
-    "url": "www.lolz.co.uk",
-    "likes": 9
+    "title": "Chao",
+    "author": "Seb K",
+    "url": "www.lah.co.uk",
+    "likes": 2
 }
